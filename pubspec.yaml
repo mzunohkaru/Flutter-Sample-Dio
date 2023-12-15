@@ -20,6 +20,7 @@ dependencies:
   dio:
   flutter_riverpod:
   riverpod_annotation:
+  freezed_annotation:
 
   auto_animated:
   
@@ -39,9 +40,9 @@ dev_dependencies:
 
 
   freezed:
-  freezed_annotation:
   json_serializable:
   build_runner:
+  riverpod_generator:
 
 
 
