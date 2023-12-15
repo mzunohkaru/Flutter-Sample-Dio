@@ -38,7 +38,17 @@ class _CoffeeDetailPageState extends State<CoffeeDetailPage> {
                     const TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               ),
               Text(widget.coffees.description.toString()),
-              Text(widget.coffees.ingredients![1])
+              const SizedBox(
+                height: 10,
+              ),
+              Flexible(
+                //Flexibleでラップ
+                child: ListView.builder(
+                    itemCount: widget.coffees.ingredients!.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Text(widget.coffees.ingredients![index]);
+                    }),
+              ),
             ],
           ),
         ),

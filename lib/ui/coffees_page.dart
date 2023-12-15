@@ -36,6 +36,7 @@ class CoffeesPage extends ConsumerWidget {
                             end: Offset.zero,
                           ).animate(animation),
                           child: Card(
+                            elevation: 15,
                             child: ListTile(
                               leading: Text(coffees.id!.toString()),
                               title: Text(coffees.title!),

@@ -1,11 +1,15 @@
-import 'package:dio_sample/ui/account_page.dart';
 import 'package:dio_sample/ui/coffees_page.dart';
 import 'package:dio_sample/ui/superheros_page.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,15 +40,6 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.person),
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const AccountPage(),
-              ),
-            );
-          }),
     );
   }
 }
